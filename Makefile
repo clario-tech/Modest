@@ -96,7 +96,7 @@ override LDFLAGS += $(MODEST_LDFLAGS)
 #********************
 # Objects
 #***************
-MODEST_BUILD_OBJECT_SHARED  ?= $(CC) -shared $(LDFLAGS) $(MODEST_LDFLAGS) -install_name @rpath/$(MODEST_LIBRARY_NAME) $1 -o $2
+MODEST_BUILD_OBJECT_SHARED  ?= $(CC) -shared $(LDFLAGS) $(MODEST_LDFLAGS) -install_name @rpath/$(MODEST_LIBRARY_NAME_WITH_VERSION) $1 -o $2
 MODEST_BUILD_OBJECT_STATIC  ?= $(AR) crus $2 $1
 MODEST_BUILD_OBJECT_MODULES := $(foreach dir,$(MODEST_BUILD_MODULES_TARGET),$($(dir)_objs))
 MODEST_BUILD_OBJECT_MODULES := $(foreach dir,$(MODEST_BUILD_MODULES_TARGET),$($(dir)_objs))
